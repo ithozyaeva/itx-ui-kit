@@ -6,5 +6,11 @@
   ],
   "exclude": [
     "src/**/*.stories.ts"
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
 }

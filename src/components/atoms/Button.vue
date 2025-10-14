@@ -30,7 +30,6 @@ withDefaults(defineProps<Props>(), {
 </template>
 
 <style lang="scss" scoped>
-@import url('../style/variables.css');
 
 .button {
   padding: 11px 26px;
