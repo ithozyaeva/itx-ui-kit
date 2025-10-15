@@ -12,6 +12,11 @@
   --light-grey: #E4E4E4;
   --white: #FFFFFF;
 
+  /* RGB versions */
+  --green-500-rgb: 95, 161, 129;
+
+
+
   /* Components */
   --default-transition: all 0.3s ease-in-out;
   --default-border-radius: 50px;
