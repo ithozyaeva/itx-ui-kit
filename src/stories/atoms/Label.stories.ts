@@ -20,4 +20,3 @@ export const Label = {
     template: '<LabelComponent v-bind="args">Label</LabelComponent>',
   }),
 };
-
