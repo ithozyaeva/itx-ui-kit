@@ -50,6 +50,8 @@
       {{ tag }}
     </Tag>
   </div>
+  <Tag aria></Tag>
+  <Button></Button>
 </template>
 
 <style lang="scss" scoped>

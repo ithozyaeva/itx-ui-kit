@@ -1,12 +1,12 @@
 /** @type { import('@storybook/vue3-vite').Preview } */
-import '@/styles/index.ts'
+import '@/styles/index.ts';
 
 const preview = {
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
 
@@ -14,7 +14,7 @@ const preview = {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
-      test: "todo"
+      test: 'todo',
     },
 
     // Установка темной темы по умолчанию
