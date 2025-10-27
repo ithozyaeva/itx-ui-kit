@@ -1,0 +1,13 @@
+import{C as e,E as t,S as n,T as r,_ as i,a,c as o,h as s,i as c,l,n as u,s as d,t as f,u as p,w as m,x as h}from"./iframe-D2YC1FqN.js";import{n as g,r as _}from"./icons-Blngbevd.js";import{t as v}from"./Typography-nW8zqK1y.js";import{t as y}from"./_plugin-vue_export-helper-BKxlXpAG.js";var b={class:`accordion-header`},x={class:`accordion-icon`},S={class:`accordion-content`},C=p({__name:`Accordion`,props:{title:{},content:{},defaultOpen:{type:Boolean,default:!1}},setup(p){let y=e(p.defaultOpen),C=()=>{y.value=!y.value};return(e,w)=>(s(),d(`div`,{class:r([`accordion`,{open:y.value}]),onClick:C},[c(`div`,b,[l(m(v),{variant:`h4`,as:`h4`,class:`accordion-title`},{default:h(()=>[o(t(p.title),1)]),_:1}),c(`div`,x,[y.value?(s(),a(m(g),{key:1})):(s(),a(m(_),{key:0}))])]),l(f,{name:`accordion`},{default:h(()=>[n(c(`div`,S,[l(m(v),{variant:`body-l`},{default:h(()=>[i(e.$slots,`default`,{},()=>[o(t(p.content),1)],!0)]),_:3})],512),[[u,y.value]])]),_:3})],2))}}),w=y(C,[[`__scopeId`,`data-v-69cdbbb4`]]);C.__docgenInfo={exportName:`default`,displayName:`Accordion`,description:``,tags:{},props:[{name:`title`,required:!0,type:{name:`string`}},{name:`content`,required:!1,type:{name:`string`}},{name:`defaultOpen`,required:!1,type:{name:`boolean`},defaultValue:{func:!1,value:`false`}}],slots:[{name:`default`}],sourceFiles:[`/home/imnoswth/Coding/Projects/itx-ui-kit/src/components/molecules/Accordion.vue`]};var T={title:`Molecules/Accordion`,component:w,argTypes:{title:{control:{type:`text`}},content:{control:{type:`text`}},defaultOpen:{control:{type:`boolean`}}},args:{title:`Как присоединиться к сообществу?`,content:`Регулярно постим вакансии и рекомендуем рефералов в свои компании. Даём советы по резюме и прохождению собеседований. Регулярно постим вакансии и рекомендуем рефералов в свои компании.`}};const E={render:e=>({components:{AccordionComponent:w},setup(){return{args:e}},template:`<AccordionComponent v-bind="args" class="width: 670px" style="width: 670px;"/>`})};E.parameters={...E.parameters,docs:{...E.parameters?.docs,source:{originalSource:`{
+  render: (args: any) => ({
+    components: {
+      AccordionComponent
+    },
+    setup() {
+      return {
+        args
+      };
+    },
+    template: \`<AccordionComponent v-bind="args" class="width: 670px" style="width: 670px;"/>\`
+  })
+}`,...E.parameters?.docs?.source}}};const D=[`Accordion`];export{E as Accordion,D as __namedExportsOrder,T as default};
