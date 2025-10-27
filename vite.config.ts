@@ -4,6 +4,7 @@ import dts from 'vite-plugin-dts';
 import path from 'path';
 import svgLoader from 'vite-svg-loader';
 
+//More info: https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
