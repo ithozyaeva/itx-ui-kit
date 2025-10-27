@@ -1,2 +1,3 @@
-import './variables.css';
 import './base.css';
+import './typography.css';
+import './tokens/index.css';

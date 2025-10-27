@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { type Component } from 'vue';
+  import { Typography } from '@/components';
 
   type AsProp = keyof HTMLElementTagNameMap | Component;
 
@@ -13,17 +14,19 @@
 </script>
 
 <template>
-  <component :is="as" class="label">
-    <slot />
+  <component :is="as" class="label-ui label">
+    <Typography variant="label" as="label">
+      <slot />
+    </Typography>
   </component>
 </template>
 
 <style lang="scss" scoped>
-  .label {
+  .label-ui {
     padding: 4px 12px;
-    border-radius: var(--button-border-radius);
-    color: var(--green-500);
+    border-radius: var(--radius-button);
+    color: var(--color-green-500);
     box-sizing: border-box;
-    background-color: rgba(var(--green-500-rgb), 0.1);
+    background-color: rgba(var(--color-green-500-rgb), 0.1);
   }
 </style>

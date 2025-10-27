@@ -1,0 +1,7 @@
+:root {
+  --radius-default: 50px;
+  --radius-button: 50px;
+  --radius-card: 25px;
+  --radius-circle: 50%;
+  --radius-accordion: 10px;
+}

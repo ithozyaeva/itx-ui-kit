@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { type Component } from 'vue';
+  import Typography from '@/components/atoms/Typography.vue';
 
   type ButtonVariant = 'filled' | 'stroke' | 'dark-filled';
 
@@ -20,99 +21,102 @@
 
 <template>
   <component :is="as" :disabled="disabled" class="button" :class="[variant, { disabled }]">
-    <slot />
+    <Typography variant="button-text">
+      <slot />
+    </Typography>
   </component>
 </template>
 
 <style lang="scss" scoped>
   .button {
     padding: 11px 26px;
-    border-radius: var(--button-border-radius);
-    color: var(--green-black-700);
-    transition: var(--default-transition);
+    border-radius: var(--radius-button);
+    color: var(--color-green-black-700);
+    transition: var(--transition-default);
     border: 4px solid transparent;
     box-sizing: border-box;
     cursor: pointer;
+    text-align: center;
+    align-content: center;
 
     &.filled {
-      background-color: var(--green-700);
+      background-color: var(--color-green-700);
 
       &:not(.disabled) {
         &:hover {
-          background-color: var(--white);
+          background-color: var(--color-white);
         }
 
         &:focus {
           outline: none;
-          border-color: var(--white);
+          border-color: var(--color-white);
         }
 
         &:active {
-          background-color: var(--grey);
+          background-color: var(--color-grey);
           border-color: transparent;
         }
       }
 
       &.disabled {
-        background-color: var(--green-black-400);
-        color: var(--green-black-600);
+        background-color: var(--color-green-black-400);
+        color: var(--color-green-black-600);
         cursor: not-allowed;
       }
     }
 
     &.stroke {
       background-color: transparent;
-      border: 2px solid var(--green-700);
-      color: var(--green-700);
+      border: 2px solid var(--color-green-700);
+      color: var(--color-green-700);
 
       &:not(.disabled) {
         &:hover {
-          border-color: var(--white);
-          color: var(--white);
+          border-color: var(--color-white);
+          color: var(--color-white);
         }
 
         &:focus {
           border-width: 4px;
-          border-color: var(--white);
+          border-color: var(--color-white);
         }
 
         &:active {
-          border-color: var(--grey);
-          color: var(--white);
-          border-color: var(--green-700);
+          border-color: var(--color-grey);
+          color: var(--color-grey);
         }
       }
 
       &.disabled {
-        border-color: var(--green-black-400);
-        color: var(--green-black-400);
+        border-color: var(--color-green-black-400);
+        color: var(--color-green-black-400);
         cursor: not-allowed;
       }
     }
 
     &.dark-filled {
-      background-color: var(--green-black-700);
-      color: var(--green-700);
+      background-color: var(--color-green-black-700);
+      color: var(--color-green-700);
 
       &:not(.disabled) {
         &:hover {
-          background-color: var(--green-black-400);
+          background-color: var(--color-green-black-400);
         }
 
         &:focus {
           outline: none;
-          border-color: var(--white);
+          border-color: var(--color-white);
         }
 
         &:active {
-          background-color: var(--green-black-500);
+          background-color: var(--color-green-black-500);
           border-color: transparent;
         }
       }
 
       &.disabled {
-        background-color: var(--green-black-600);
-        color: var(--green-black-400);
+        background-color: var(--color-green-black-600);
+        color: var(--color-green-black-400);
         cursor: not-allowed;
       }
     }

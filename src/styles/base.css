@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-inter), system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -35,6 +35,20 @@ h1 {
   line-height: 1.1;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -56,6 +70,11 @@ button:focus-visible {
 
 .card {
   padding: 2em;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 #app {

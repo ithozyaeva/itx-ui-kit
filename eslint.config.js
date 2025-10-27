@@ -5,18 +5,15 @@ import vueParser from 'vue-eslint-parser';
 import vuePlugin from 'eslint-plugin-vue';
 import prettierPlugin from 'eslint-plugin-prettier';
 import prettierConfig from 'eslint-config-prettier';
+import globals from 'globals';
 
 const customGlobals = {
-  window: 'readonly',
-  document: 'readonly',
-  navigator: 'readonly',
-  console: 'readonly',
-  HTMLElementTagNameMap: 'readonly',
   defineProps: 'readonly',
   defineEmits: 'readonly',
   defineExpose: 'readonly',
   withDefaults: 'readonly',
   Component: 'readonly',
+  HTMLElementTagNameMap: 'readonly',
 };
 
 export default [
@@ -41,7 +38,11 @@ export default [
         ecmaVersion: 2023,
         sourceType: 'module',
       },
-      globals: customGlobals,
+      globals: {
+        ...globals.browser,
+        ...globals.es2021,
+        ...customGlobals,
+      },
     },
     plugins: {
       '@typescript-eslint': tsPlugin,
@@ -73,7 +74,11 @@ export default [
         sourceType: 'module',
         extraFileExtensions: ['.vue'],
       },
-      globals: customGlobals,
+      globals: {
+        ...globals.browser,
+        ...globals.es2021,
+        ...customGlobals,
+      },
     },
     plugins: {
       vue: vuePlugin,

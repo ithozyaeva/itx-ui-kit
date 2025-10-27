@@ -1,0 +1,16 @@
+:root {
+  /* Colors */
+  --color-total-black: #000000;
+  --color-green-black-700: #141615;
+  --color-green-black-600: #1d211f;
+  --color-green-black-500: #1d2723;
+  --color-green-black-400: #2b3d36;
+  --color-green-700: #43d18c;
+  --color-green-500: #5fa181;
+  --color-grey: #a2b0a9;
+  --color-light-grey: #e4e4e4;
+  --color-white: #ffffff;
+
+  /* RGB versions */
+  --color-green-500-rgb: 95, 161, 129;
+}
