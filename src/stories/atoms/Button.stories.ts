@@ -1,8 +1,8 @@
-import ButtonComponent from './Button.vue';
+import { Button as ButtonComponent } from '@/components';
 
 export default {
-  title: 'Example/Button',
-  component: ButtonComponent, 
+  title: 'Atoms/Button',
+  component: ButtonComponent,
   argTypes: {
     variant: { control: { type: 'select' }, options: ['filled', 'stroke', 'dark-filled'] },
     as: { control: { type: 'text' } },
@@ -21,7 +21,7 @@ export const Button = {
     setup() {
       return { args };
     },
-    template: '<ButtonComponent v-bind="args">Button</Button>',
+    template: '<ButtonComponent v-bind="args">Button</ButtonComponent>',
   }),
 };
 
