@@ -24,4 +24,3 @@ export const Button = {
     template: '<ButtonComponent v-bind="args">Button</ButtonComponent>',
   }),
 };
-

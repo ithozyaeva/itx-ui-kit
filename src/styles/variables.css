@@ -3,14 +3,17 @@
   --total-black: #000000;
   --green-black-800: #141615;
   --green-black-700: #141615;
-  --green-black-600: #1D211F;
-  --green-black-500: #1D2723;
-  --green-black-400: #2B3D36;
-  --green-700: #43D18C;
-  --green-500: #5FA181;
-  --grey: #A2B0A9;
-  --light-grey: #E4E4E4;
-  --white: #FFFFFF;
+  --green-black-600: #1d211f;
+  --green-black-500: #1d2723;
+  --green-black-400: #2b3d36;
+  --green-700: #43d18c;
+  --green-500: #5fa181;
+  --grey: #a2b0a9;
+  --light-grey: #e4e4e4;
+  --white: #ffffff;
+
+  /* RGB versions */
+  --green-500-rgb: 95, 161, 129;
 
   /* Components */
   --default-transition: all 0.3s ease-in-out;
