@@ -1,16 +1,24 @@
 {
-  "name": "vite-project",
+  "name": "@itx/ui-kit",
+  "version": "0.1.0",
   "private": false,
-  "version": "0.0.0",
+  "description": "ITX UI Kit for Vue 3 applications",
+  "author": "IT Hozyaeva",
   "type": "module",
+  "main": "./dist/itx-uikit.umd.js",
+  "module": "./dist/itx-uikit.js",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/style.css",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "deploy-storybook": "storybook build -o storybook-static && npx gh-pages -d storybook-static -b gh-pages",
     "lint": "eslint \"src/**/*.{ts,tsx,vue}\"",
     "lint:fix": "eslint \"src/**/*.{ts,tsx,vue}\" --fix",
-    "format": "prettier --write \"src/**/*.{ts,tsx,vue,js,json,scss,css,md}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,vue,js,json,scss,css,md}\"",
+    "release": "npm publish --access public"
   },
   "files": [
     "dist"
@@ -52,6 +60,15 @@
     "vitest": "^3.2.4",
     "vue": "^3.5.22",
     "vue-eslint-parser": "^9.4.3",
-    "vue-tsc": "^3.1.0"
-  }
+    "vue-tsc": "^3.1.0",
+    "gh-pages": "^6.2.0"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ithozyaeva/itx-ui-kit.git"
+  },
+  "homepage": "https://it-hozyaeva.github.io/itx-ui-kit"
 }
