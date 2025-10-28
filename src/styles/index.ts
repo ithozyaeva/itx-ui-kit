@@ -1,3 +1,1 @@
-import './base.css';
-import './typography.css';
-import './tokens/index.css';
+import './index.css';
