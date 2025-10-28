@@ -15,6 +15,7 @@ const config = {
     name: '@storybook/vue3-vite',
     options: {},
   },
+  staticDirs: ['../public'],
   viteFinal: async (config) => {
     return mergeConfig(config, {
       plugins: [svgLoader()],
@@ -30,6 +31,11 @@ const config = {
       alias: {
         '@': path.resolve(__dirname, '../src'),
       },
+    },
+  },
+  server: {
+    mimeTypes: {
+      '.ico': 'image/x-icon',
     },
   },
 };
