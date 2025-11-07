@@ -1,5 +1,5 @@
 /** @type { import('@storybook/vue3-vite').Preview } */
-import '@/styles/index.ts';
+import '@/styles/index.css';
 
 const preview = {
   parameters: {

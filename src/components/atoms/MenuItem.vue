@@ -32,6 +32,7 @@
     cursor: pointer;
     text-decoration: none;
     transition: var(--transition-default);
+    display: inline-block;
 
     &.default {
       &:hover {

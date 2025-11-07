@@ -4,15 +4,16 @@ import dts from 'vite-plugin-dts';
 import path from 'path';
 import svgLoader from 'vite-svg-loader';
 
-// https://vite.dev/config/
+//More info: https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     svgLoader(),
     dts({
       insertTypesEntry: true,
+      outDir: 'dist',
+      include: ['src'],
     }),
-    ,
   ],
   resolve: {
     alias: {
@@ -21,9 +22,19 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: 'src/index.ts',
-      formats: ['es'],
-      name: 'itx-uikit',
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'ItxUiKit',
+      fileName: (format) => `itx-uikit.${format}.js`,
+      formats: ['es', 'umd'],
     },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: { vue: 'Vue' },
+      },
+    },
+    cssCodeSplit: false,
+    outDir: 'dist',
+    emptyOutDir: true,
   },
 });
