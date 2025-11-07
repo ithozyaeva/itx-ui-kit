@@ -12,7 +12,14 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       outDir: 'dist',
-      include: ['src'],
+      include: ['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.vue'],
+      exclude: ['src/**/*.stories.ts', 'src/**/*.stories.tsx'],
+      rollupTypes: false,
+      copyDtsFiles: true,
+      entryRoot: 'src',
+      staticImport: true,
+      tsconfigPath: './tsconfig.app.json',
+      logLevel: 'info',
     }),
   ],
   resolve: {
@@ -20,6 +27,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf'],
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
@@ -31,6 +39,7 @@ export default defineConfig({
       external: ['vue'],
       output: {
         globals: { vue: 'Vue' },
+        assetFileNames: 'style.css',
       },
     },
     cssCodeSplit: false,
