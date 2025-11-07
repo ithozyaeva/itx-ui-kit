@@ -1,14 +1,26 @@
 {
-  "name": "@itx/ui-kit",
+  "name": "itx-ui-kit",
   "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "private": false,
   "description": "ITX UI Kit for Vue 3 applications",
   "author": "IT Hozyaeva",
   "type": "module",
   "main": "./dist/itx-uikit.umd.js",
-  "module": "./dist/itx-uikit.js",
+  "module": "./dist/itx-uikit.es.js",
   "types": "./dist/index.d.ts",
   "style": "./dist/style.css",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/itx-uikit.es.js",
+      "require": "./dist/itx-uikit.umd.js",
+      "default": "./dist/itx-uikit.es.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
