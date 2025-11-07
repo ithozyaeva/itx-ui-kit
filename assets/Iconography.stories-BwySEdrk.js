@@ -1,4 +1,4 @@
-import{d as e,u as t}from"./iframe-D2YC1FqN.js";import{t as n}from"./icons-Blngbevd.js";var r={title:`Iconography`};const i=()=>{let r=Object.entries(n);return t({setup(){return()=>e(`div`,{style:{display:`grid`,gridTemplateColumns:`repeat(auto-fill, 100px)`,gap:`20px`}},r.map(([t,n])=>e(`div`,{style:{textAlign:`center`}},[e(n,{style:{width:`40px`,height:`40px`}}),e(`div`,t)])))}})};i.parameters={...i.parameters,docs:{...i.parameters?.docs,source:{originalSource:`() => {
+import{d as e,u as t}from"./iframe-nJ-n6RJd.js";import{t as n}from"./icons-CvQx4alI.js";var r={title:`Iconography`};const i=()=>{let r=Object.entries(n);return t({setup(){return()=>e(`div`,{style:{display:`grid`,gridTemplateColumns:`repeat(auto-fill, 100px)`,gap:`20px`}},r.map(([t,n])=>e(`div`,{style:{textAlign:`center`}},[e(n,{style:{width:`40px`,height:`40px`}}),e(`div`,t)])))}})};i.parameters={...i.parameters,docs:{...i.parameters?.docs,source:{originalSource:`() => {
   const iconEntries = Object.entries(Icons);
   return defineComponent({
     setup() {
