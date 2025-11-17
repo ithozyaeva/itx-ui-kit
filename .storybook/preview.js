@@ -1,5 +1,6 @@
 /** @type { import('@storybook/vue3-vite').Preview } */
 import '@/styles/index.css';
+import '@/styles/demo/base.css';
 
 const preview = {
   parameters: {

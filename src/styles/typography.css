@@ -102,3 +102,19 @@
   letter-spacing: var(--button-letter-spacing);
   text-transform: var(--button-transform);
 }
+
+.name-text {
+  font-family: var(--name-text-font), sans-serif;
+  font-weight: var(--name-text-weight);
+  font-size: var(--name-text-size);
+  line-height: var(--name-text-line-height);
+  letter-spacing: var(--name-text-letter-spacing);
+}
+
+.date {
+  font-family: var(--date-font), sans-serif;
+  font-weight: var(--date-weight);
+  font-size: var(--date-size);
+  line-height: var(--date-line-height);
+  letter-spacing: var(--date-letter-spacing);
+}

@@ -20,7 +20,7 @@
 
 <template>
   <component :is="as" class="menu-item" :class="[variant]" v-bind="attrs">
-    <Typography variant="body-m">
+    <Typography variant="button-text">
       <slot />
     </Typography>
   </component>

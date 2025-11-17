@@ -1,3 +1,4 @@
 import './styles/tokens/index.css';
 export * from './components';
-import './styles/index.ts';
+import './styles/index.css';
+export * from './assets/icons';

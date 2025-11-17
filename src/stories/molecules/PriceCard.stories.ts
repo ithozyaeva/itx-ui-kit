@@ -14,7 +14,8 @@ export default {
   args: {
     variant: 'default',
     name: 'Новичок',
-    price: 200,
+    price: 1000,
+    oldPrice: 2000,
     features: ['Доступ в 20 чатов сообщества', 'Участие в мероприятиях', 'Оффлайн-встречи'],
     link: 'https://boosty.to/jointime',
   },
@@ -26,6 +27,11 @@ export const PriceCard = {
     setup() {
       return { args };
     },
-    template: `<PriceCardComponent v-bind="args" />`,
+    template: `
+      <div style="display: flex; gap:12px">
+        <PriceCardComponent v-bind="args" />
+        <PriceCardComponent v-bind="args" variant="highlighted" />
+      </div>
+    `,
   }),
 };

@@ -14,23 +14,27 @@
     | 'body-xs'
     | 'title'
     | 'label'
-    | 'button-text';
+    | 'button-text'
+    | 'name-text'
+    | 'date';
 
   type AsProp = keyof HTMLElementTagNameMap | Component;
 
   interface Props {
     as?: AsProp;
     variant?: TypographyVariant;
+    typographyType?: 'main' | 'text';
   }
 
   withDefaults(defineProps<Props>(), {
     as: 'p',
     variant: 'body-l',
+    typographyType: 'main',
   });
 </script>
 
 <template>
-  <component :is="as" :class="[variant]">
+  <component :is="as" :class="[variant]" :data-typography="typographyType">
     <slot />
   </component>
 </template>

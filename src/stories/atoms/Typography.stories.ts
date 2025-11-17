@@ -20,17 +20,24 @@ export default {
         'title',
         'label',
         'button-text',
+        'name-text',
+        'date',
       ],
     },
     as: {
       control: { type: 'select' },
       options: ['h1', 'h2', 'h3', 'h4', 'p', 'span', 'label', 'div', 'title'],
     },
+    typographyType: {
+      control: { type: 'select' },
+      options: ['main', 'text'],
+    },
     text: { control: { type: 'text' } },
   },
   args: {
     as: 'p',
     variant: 'body-l',
+    typographyType: 'main',
     text: 'The quick brown fox jumps over the lazy dog.',
   },
 };
@@ -56,6 +63,8 @@ export const Typography = {
         <TypographyComponent variant="title" as="p">Title — Unbounded 14px</TypographyComponent>
         <TypographyComponent variant="label" as="p">Label — Inter 14px</TypographyComponent>
         <TypographyComponent variant="button-text" as="span">Button Text — Unbounded 18px</TypographyComponent>
+        <TypographyComponent variant="name-text" as="span">Name — Unbounded 16px</TypographyComponent>
+        <TypographyComponent variant="date" as="span">Date — Unbounded 16px</TypographyComponent>
       </div>
       <hr style="margin-block: 30px"/>
       <div style="color: var(--color-light-grey); border: 2px solid var(--color-green-black-400); background-color: var(--color-green-black-500); padding: 26px; position: relative">

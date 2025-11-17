@@ -33,23 +33,24 @@
     transition: var(--transition-default);
     box-sizing: border-box;
     cursor: pointer;
+    outline: 4px solid transparent;
+    border: none;
 
     &.default {
-      border: 1px solid var(--color-green-700);
+      outline: 1px solid var(--color-green-700);
       background-color: transparent;
 
       &:hover {
-        border-color: var(--color-white);
+        outline-color: var(--color-white);
         color: var(--color-white);
       }
 
       &:focus {
-        outline: none;
-        border: 4px solid var(--color-white);
+        outline: 4px solid var(--color-white);
       }
 
       &:active {
-        border-color: var(--color-grey);
+        outline-color: var(--color-grey);
         color: var(--color-grey);
       }
     }
@@ -57,15 +58,13 @@
     &.active {
       background-color: var(--color-green-700);
       color: var(--color-green-black-700);
-      border: 4px solid transparent;
-
+      outline: none;
       &:hover {
         background-color: var(--color-white);
       }
 
       &:focus {
-        outline: none;
-        border: 4px solid var(--color-white);
+        outline: 4px solid var(--color-white);
       }
 
       &:active {
