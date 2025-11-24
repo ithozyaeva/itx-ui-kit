@@ -10,7 +10,7 @@ export const MentorCard = (args: any) => ({
   setup() {
     return { args };
   },
-  template: '<MentorCardComponent v-bind="args" />',
+  template: '<MentorCardComponent v-bind="args" style="max-width: 500px"/>',
 });
 
 MentorCard.args = {

@@ -18,11 +18,12 @@ export const Iconography = () => {
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fill, 100px)',
               gap: '20px',
+              justifyItems: 'center',
             },
           },
           iconEntries.map(([name, Icon]) =>
             h('div', { style: { textAlign: 'center' } }, [
-              h(Icon, { style: { width: '40px', height: '40px' } }),
+              h(Icon, { style: { maxWidth: '40px', maxHeight: '40px' } }),
               h('div', name),
             ]),
           ),

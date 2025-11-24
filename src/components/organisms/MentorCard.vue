@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { Button, Label, Typography } from '@/components';
   import { nextTick, onMounted, ref } from 'vue';
+  import { AvatarPlaceholderIcon } from '@/assets/icons';
 
   interface Props {
     avatar: string;
@@ -20,6 +21,19 @@
   const containerRef = ref<HTMLElement | null>(null);
   const displayedLabels = ref<string[]>([]);
   const showEllipsis = ref(false);
+
+  const imageError = ref(false);
+
+  function handleImageError() {
+    imageError.value = true;
+  }
+
+  function handleImageLoad(event: Event) {
+    const img = event.target as HTMLImageElement;
+    if (img.naturalWidth <= 1 && img.naturalHeight <= 1) {
+      imageError.value = true;
+    }
+  }
 
   onMounted(async () => {
     if (!containerRef.value || props.labels.length === 0) return;
@@ -51,11 +65,24 @@
     <div>
       <div class="top-section">
         <div class="avatar">
-          <img :src="avatar" alt="Mentor avatar" fetchpriority="high" />
+          <template v-if="!imageError">
+            <img
+              :src="avatar"
+              alt="Mentor avatar"
+              fetchpriority="high"
+              @error="handleImageError"
+              @load="handleImageLoad"
+            />
+          </template>
+          <template v-else>
+            <AvatarPlaceholderIcon />
+          </template>
         </div>
         <div>
           <Typography variant="h4" class="name">{{ name }}</Typography>
-          <Typography variant="title" class="position">{{ position }}</Typography>
+          <Typography variant="title" class="position">
+            {{ position.length ? position : 'Не указано' }}
+          </Typography>
         </div>
       </div>
       <div class="bottom-section">
@@ -66,7 +93,7 @@
         <Typography variant="body-xs" class="description">{{ description }}</Typography>
       </div>
     </div>
-    <Button as="a" :href="link" variant="stroke" class="button">Подробнее</Button>
+    <Button as="a" :href="link" target="_blank" variant="stroke" class="button">Подробнее</Button>
   </div>
 </template>
 
@@ -75,13 +102,12 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--color-green-black-600);
     border-radius: var(--radius-card);
     padding: 20px 23px 25px 23px;
     gap: 25px;
-    max-width: 440px;
     width: 100%;
 
     .top-section {

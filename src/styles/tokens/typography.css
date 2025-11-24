@@ -15,7 +15,7 @@
   --h2-font: var(--font-unbounded);
   --h2-weight: 600;
   --h2-size: 36px;
-  --h2-line-height: 1.25;
+  --h2-line-height: 1.4;
   --h2-letter-spacing: 0.04em;
   --h2-transform: uppercase;
 
@@ -31,7 +31,7 @@
   --h4-font: var(--font-unbounded);
   --h4-weight: 600;
   --h4-size: 20px;
-  --h4-line-height: 1.35;
+  --h4-line-height: 1.4;
   --h4-letter-spacing: 0;
 
   /* === Price === */
@@ -45,7 +45,7 @@
   --body-xl-font: var(--font-inter);
   --body-xl-weight: 500;
   --body-xl-size: 24px;
-  --body-xl-line-height: 1.35;
+  --body-xl-line-height: 1.4;
   --body-xl-letter-spacing: 0;
 
   /* === Body L === */
@@ -59,7 +59,7 @@
   --body-m-font: var(--font-inter);
   --body-m-weight: 500;
   --body-m-size: 18px;
-  --body-m-line-height: 1.35;
+  --body-m-line-height: 1.4;
   --body-m-letter-spacing: 0;
 
   /* === Body S === */
@@ -73,7 +73,7 @@
   --body-xs-font: var(--font-inter);
   --body-xs-weight: 500;
   --body-xs-size: 14px;
-  --body-xs-line-height: 1.45;
+  --body-xs-line-height: 1.4;
   --body-xs-letter-spacing: 0;
 
   /* === Title === */
@@ -97,4 +97,18 @@
   --button-line-height: 1;
   --button-letter-spacing: 0.04em;
   --button-transform: uppercase;
+
+  /* === Name === */
+  --name-text-font: var(--font-unbounded);
+  --name-text-weight: 600;
+  --name-text-size: 14px;
+  --name-text-line-height: 1.4;
+  --name-text-letter-spacing: 0;
+
+  /* === Date === */
+  --date-font: var(--font-unbounded);
+  --date-weight: 400;
+  --date-size: 16px;
+  --date-line-height: 1;
+  --date-letter-spacing: 0;
 }

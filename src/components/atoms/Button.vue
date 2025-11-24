@@ -38,6 +38,7 @@
     cursor: pointer;
     text-align: center;
     align-content: center;
+    min-height: 48px;
 
     &.filled {
       background-color: var(--color-green-700);
