@@ -1,3 +1,6 @@
 :root {
   --transition-default: all 0.3s ease-in-out;
+  --transition-fast: all 0.15s ease-in-out;
+  --transition-popover: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-modal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
