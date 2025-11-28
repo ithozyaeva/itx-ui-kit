@@ -60,6 +60,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-vue": "^9.33.0",
+    "gh-pages": "^6.2.0",
     "globals": "^16.4.0",
     "playwright": "^1.56.0",
     "prettier": "^3.6.2",
@@ -72,8 +73,7 @@
     "vitest": "^3.2.4",
     "vue": "^3.5.22",
     "vue-eslint-parser": "^9.4.3",
-    "vue-tsc": "^3.1.0",
-    "gh-pages": "^6.2.0"
+    "vue-tsc": "^3.1.0"
   },
   "sideEffects": [
     "*.css"
@@ -82,5 +82,8 @@
     "type": "git",
     "url": "https://github.com/ithozyaeva/itx-ui-kit.git"
   },
-  "homepage": "https://it-hozyaeva.github.io/itx-ui-kit"
+  "homepage": "https://it-hozyaeva.github.io/itx-ui-kit",
+  "dependencies": {
+    "@floating-ui/vue": "^1.1.9"
+  }
 }
