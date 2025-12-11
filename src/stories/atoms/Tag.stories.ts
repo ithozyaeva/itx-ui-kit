@@ -6,10 +6,12 @@ export default {
   argTypes: {
     variant: { control: { type: 'select' }, options: ['active', 'default'] },
     as: { control: { type: 'text' } },
+    disabled: { control: { type: 'boolean' } },
   },
   args: {
     as: 'button',
     variant: 'default',
+    disabled: false,
   },
 };
 

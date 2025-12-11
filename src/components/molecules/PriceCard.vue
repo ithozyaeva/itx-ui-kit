@@ -36,13 +36,6 @@
           <Typography v-if="discount" as="p" variant="title" class="discount">
             −{{ discount }}%
           </Typography>
-          <div class="prices">
-            <Typography v-if="oldPrice" variant="price" class="old-price">
-              {{ oldPrice }}₽
-            </Typography>
-            <Typography variant="price" class="price">{{ price }}₽</Typography>
-          </div>
-          <Typography variant="label" class="period">в месяц</Typography>
         </div>
       </div>
       <ul class="features-container">
@@ -51,14 +44,24 @@
         </li>
       </ul>
     </div>
-    <Button
-      :variant="variant === 'highlighted' ? 'dark-filled' : 'filled'"
-      as="a"
-      :href="link"
-      target="_blank"
-    >
-      Подписаться
-    </Button>
+    <div class="footer">
+      <div class="price-container">
+        <div class="prices">
+          <Typography v-if="oldPrice" variant="price" class="old-price">{{ oldPrice }}₽</Typography>
+          <Typography variant="price" class="price">{{ price }}₽</Typography>
+        </div>
+        <Typography variant="label" class="period">в месяц</Typography>
+      </div>
+      <Button
+        :variant="variant === 'highlighted' ? 'dark-filled' : 'filled'"
+        as="a"
+        :href="link"
+        target="_blank"
+        class="button"
+      >
+        Подписаться
+      </Button>
+    </div>
   </div>
 </template>
 
@@ -71,7 +74,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 32px;
-    min-width: 325px;
+    min-width: 300px;
     min-height: 360px;
 
     .content {
@@ -88,33 +91,51 @@
         align-items: center;
         text-align: center;
         gap: 4px;
-
-        .price-container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          .prices {
-            display: flex;
-            gap: 6px;
-            align-items: center;
-            margin: 12px 0 8px;
-            .old-price {
-              text-decoration: line-through;
-            }
-          }
-          .discount {
-            border: 1px solid;
-            border-radius: var(--radius-default);
-            padding: 4px 8px;
-          }
-        }
       }
 
       .features-container {
         display: flex;
         flex-direction: column;
         gap: 8px;
+        align-items: start;
+        list-style: disc outside;
+        padding-left: 20px;
+        text-align: start;
+        max-width: 400px;
+      }
+    }
+
+    .price-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .prices {
+        display: flex;
+        gap: 6px;
         align-items: center;
+        margin: 12px 0 8px;
+        .old-price {
+          text-decoration: line-through;
+        }
+      }
+      .discount {
+        border: 1px solid;
+        border-radius: var(--radius-default);
+        padding: 4px 8px;
+      }
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
       }
     }
 
