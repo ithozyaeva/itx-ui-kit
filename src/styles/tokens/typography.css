@@ -94,7 +94,7 @@
   --button-font: var(--font-unbounded);
   --button-weight: 600;
   --button-size: 18px;
-  --button-line-height: 1;
+  --button-line-height: 1.2;
   --button-letter-spacing: 0.04em;
   --button-transform: uppercase;
 

@@ -32,13 +32,13 @@
         <CloseIcon v-else />
       </div>
     </div>
-    <transition name="accordion">
-      <div v-show="isOpen" class="accordion-content">
+    <div class="accordion-wrapper" :class="{ 'accordion-wrapper--open': isOpen }">
+      <div class="accordion-content">
         <Typography variant="body-l">
           <slot>{{ content }}</slot>
         </Typography>
       </div>
-    </transition>
+    </div>
   </div>
 </template>
 
@@ -82,23 +82,20 @@
         }
       }
     }
+
+    .accordion-wrapper {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.25s ease;
+
+      &--open {
+        grid-template-rows: 1fr;
+      }
+    }
+
     .accordion-content {
+      overflow: hidden;
       color: var(--color-light-grey);
     }
-  }
-
-  .accordion-enter-active,
-  .accordion-leave-active {
-    transition: all 0.25s ease;
-  }
-  .accordion-enter-from,
-  .accordion-leave-to {
-    opacity: 0;
-    max-height: 0;
-  }
-  .accordion-enter-to,
-  .accordion-leave-from {
-    opacity: 1;
-    max-height: 500px;
   }
 </style>
